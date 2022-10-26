@@ -1,7 +1,8 @@
-
 from flask import Flask
+from flask_cors import CORS
 
 app = Flask(__name__)
+core = CORS(app, resources={r"/*" : {"origins" : "*"}})
 @app.route('/')
 def hello_world():
     result = {"code" : 200, "message" : "Hello World!"}
