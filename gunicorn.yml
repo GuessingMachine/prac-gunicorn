@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: gunicorn
+
+spec:
+ selector:
+   matchLabels:
+    type: gunicorn
+ replicas: 2
+ template:
+   metadata:
+     labels:
+       type: gunicorn
+   spec:
+    containers:
+    - name: container
+      image: conna/gunicorn:latest
+      ports:
+      - containerPort: 80
+      resources:
+        requests:
+          cpu: 100m
+        limits:
+          cpu: 200m
