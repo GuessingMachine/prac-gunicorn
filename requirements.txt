@@ -6,7 +6,7 @@ distlib==0.3.6
 filelock==3.4.1
 Flask==2.0.3
 Flask-Cors==3.0.10
-gpg==1.13.1
+gpg
 gunicorn==20.1.0
 importlib-metadata==4.8.3
 importlib-resources==5.4.0
