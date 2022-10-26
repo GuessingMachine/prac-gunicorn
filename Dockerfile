@@ -1,4 +1,4 @@
-FROM    python
+FROM    python:3.6.8
 ADD     ./main.py /main.py
 ADD     ./wsgi.py /wsgi.py
 ADD     ./requirements.txt /requirements.txt
