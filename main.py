@@ -1,8 +1,6 @@
-From flask import Flask # 서버 구현을 위한 flask import
+From flask import Flask
 
 app = Flask(__name__)
-
-
 @app.route('/')
 def hello_world():
     result = {"code" : 200, "message" : "Hello World!"}
