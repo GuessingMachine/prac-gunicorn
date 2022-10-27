@@ -1,17 +1,16 @@
 from flask import Flask
 from flask_cors import CORS
 import pymysql
-host = "192.168.197.161"
-user = "root"
-db = "test"
-passwd = "qwer1234"
-port = 30000
 
 app = Flask(__name__)
 core = CORS(app, resources={r"/*" : {"origins" : "*"}})
 @app.route('/hello')
 def hello_world():
-    DB = pymysql.connect(host=host, user=user, db=db, password=passwd, port=port, charset='utf8')
+    host = "mysql-svc"
+    user = "root"
+    db = "test"
+    passwd = "qwer1234"
+    DB = pymysql.connect(host=host, user=user, db=db, password=passwd, charset='utf8')
     curs = DB.cursor()
     sql = "select * from student";
     curs.execute(sql)
