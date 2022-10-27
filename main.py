@@ -16,7 +16,10 @@ def hello_world():
     sql = "select * from student";
     curs.execute(sql)
     rows = curs.fetchall()
-    return rows[0]
+    dic = {}
+    for i in rows:
+        dic[i[0]] = i[1]
+    return dic
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
