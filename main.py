@@ -10,7 +10,7 @@ def hello_world():
     user = "root"
     db = "test"
     passwd = "qwer1234"
-    DB = pymysql.connect(host=host, user=user, db=db, password=passwd, charset='utf8')
+    DB = pymysql.connect(host=host, user=user, db=db, password=passwd, charset="UTF8")
     curs = DB.cursor()
     sql = "select * from student";
     curs.execute(sql)
