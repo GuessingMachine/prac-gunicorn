@@ -1,8 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: gunicorn
-
+ name: backend-deployment
 spec:
  selector:
    matchLabels:
@@ -16,6 +15,11 @@ spec:
     containers:
     - name: container
       image: conna/gunicorn:latest
+      envFrom:
+        - configMapRef:
+            name: mysql-cm
+        - secretRef:
+            name: mysql-sec
       ports:
       - containerPort: 8000
       resources:
