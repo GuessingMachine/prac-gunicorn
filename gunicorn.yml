@@ -7,12 +7,14 @@ spec:
    matchLabels:
     type: gunicorn
     app: backend
+    version: ver.latest
  replicas: 2
  template:
    metadata:
      labels:
        type: gunicorn
        app: backend
+       version: ver.latest
    spec:
     containers:
     - name: container
