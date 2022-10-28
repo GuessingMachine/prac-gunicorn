@@ -6,11 +6,13 @@ spec:
  selector:
    matchLabels:
     type: gunicorn
+    app: backend
  replicas: 2
  template:
    metadata:
      labels:
        type: gunicorn
+       app: backend
    spec:
     containers:
     - name: container
