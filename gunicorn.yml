@@ -8,7 +8,7 @@ spec:
     type: gunicorn
     app: backend
     version: ver.latest
- replicas: 2
+ replicas: 1
  template:
    metadata:
      labels:
