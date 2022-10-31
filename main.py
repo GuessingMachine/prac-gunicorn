@@ -5,7 +5,7 @@ import os
 
 app = Flask(__name__)
 core = CORS(app, resources={r"/*" : {"origins" : "*"}})
-@app.route('/bye')
+@app.route('/hello')
 def hello_world():
     host = os.environ['DB_HOST']
     user = os.environ['DB_USER']
